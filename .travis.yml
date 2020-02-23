@@ -7,4 +7,4 @@ before_install:
   - docker build -t bntzio/docker-react-app -f Dockerfile.dev .
 
 script:
-  - docker run bntzio/docker-react-app yarn test:ci
+  - docker run -e CI=true bntzio/docker-react-app yarn test
